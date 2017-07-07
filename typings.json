@@ -1,0 +1,13 @@
+{
+    "globalDependencies": {
+        "core-js": "registry:dt/core-js#0.9.0+20170324193834",
+        "jasmine": "registry:dt/jasmine#2.5.2+20170317130948",
+        "node": "registry:dt/node#7.0.0+20170322231424",
+        "socket-io-client":"github:DefinitelyTyped/DefinitelyTyped/socket.io-client/socket.io-client.d.ts#7de6c3dd94feaeb21f20054b9f30d5dabc5efabd"
+   
+
+        
+    }
+
+    
+}

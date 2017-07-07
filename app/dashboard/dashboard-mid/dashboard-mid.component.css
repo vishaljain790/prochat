@@ -1,0 +1,43 @@
+.upper { 
+
+     background-color: #ffffff; 
+     background-size:100% 100%;
+     height: auto;
+     width: 100%;
+    
+}
+
+.header{
+
+    text-align: center;
+    margin-top: 50px;
+    
+   
+}
+
+.header h6{
+
+    
+        color: #5f6062;
+       font-size: 70px;
+       font-style: normal;
+}
+
+
+.column-box{
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.column-box h3{
+
+    color: #1f1a17;
+}
+
+.column-box p{
+
+    color: #383838;
+    padding: 5px;
+    font-size: 19px;
+} 

@@ -1,0 +1,80 @@
+<!--chat_sidebar-->
+
+
+<div class="row chatboard_nouser" *ngIf="dedicatedname == 'nouser'" >
+    <div class="new_message_head">
+        <div class="pull-left" *ngIf="dedicatedname == 'nouser'">
+            <button>
+                <i class="fa fa-plus-square-o" aria-hidden="true"></i> 
+            </button>
+        </div>
+        <div class="pull-left" *ngIf="dedicatedname != 'nouser'">
+            <button>
+                <i class="fa fa-plus-square-o" aria-hidden="true"></i> {{ dedicatedname }}
+            </button>
+        </div>
+       
+    </div>
+    
+
+    <div class="chat_area_nouser ">
+        <h4>Click on your friend's list to get started chatting..!</h4>
+    </div>
+    
+</div>
+
+
+
+
+
+
+<!--<div class="col-sm-9 message_section"> -->
+<div class="row chatboard" *ngIf="dedicatedname != 'nouser'">
+    <div class="new_message_head">
+        <div class="pull-left"><button><i class="fa fa-plus-square-o" aria-hidden="true"></i> {{ dedicatedname }}</button></div>
+        <div class="pull-right">
+            
+        </div>
+    </div>
+    <!--new_message_head-->
+    <div class="clearfix">
+    <div class="user-msg-input">
+    <div class="chat_area_message">
+        <div class="chat_area list-group">
+        <div class="list-group-item clearfix" *ngFor= "let msg of conversation">
+            
+            <span class="pull-right clearfix list-group-item-success" *ngIf = "dedicatedusername == msg.fromusername">
+
+                {{ msg.message }}
+            </span>
+
+            <span class="pull-left clearfix list-group-item-info" *ngIf = "dedicatedusername != msg.fromusername">
+
+                {{ msg.message }}
+            </span>
+        </div>
+         <!--<div class="list-unstyled list-group margin-bottom-0" *ngIf = " rightnowmsg == '1'">
+            
+            <span  class="text-right list-group-item list-group-item-success" >
+
+                {{ rightmsg}}
+            </span>
+        </div>-->
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--chat_area-->
+    <div class="message_write">
+        <textarea class="form-control" placeholder="type a message" #text  [(ngModel)]="message" 
+            (keypress)="keypressHandler($event)"
+        ></textarea>
+        <div class="clearfix"></div>
+        <div class="chat_bottom">
+                <a  class="pull-right btn btn-success" (click)= "sendmsg(text.value)">
+                Send</a>
+        </div>
+    </div>
+</div>
+<!--</div>-->
+<!--message_section-->

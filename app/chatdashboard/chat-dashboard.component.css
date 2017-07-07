@@ -1,0 +1,19 @@
+ /*.container {
+     width: 100%;
+ }
+ 
+ .main_section {
+     width: 100%;
+ }
+ 
+ .chat_container {
+     width: 100%;
+ }*/
+ 
+ .container {
+     width: 100%;
+ }
+ 
+ .message_section {
+     border: 1px solid #dddddd;
+ }

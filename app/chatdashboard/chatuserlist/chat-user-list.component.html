@@ -1,0 +1,43 @@
+<!--<div class="col-sm-3 chat_sidebar">-->
+<div class="row">
+
+    
+    <div id="custom-search-input" >
+       
+        <div class="input-group col-sm-12">
+            <h4>{{ currentUsername }}(online)</h4>
+        </div>
+    </div>
+    
+    
+</div> 
+      
+        
+
+<div class="row">
+    <div class="member_list">
+        <ul class="list-unstyled" *ngFor = "let user of userdetails"  >
+            <li class="left clearfix" *ngIf = " user.name !=  currentUsername">
+                <span class="chat-img pull-left">
+                    <span class=" glyphicon glyphicon-user"></span>
+                      </span>
+                <div class="chat-body clearfix">
+                    <div class="header_sec1"  *ngIf= " user.status == 'inactive' "  (click)= "dedicateduser(user.name,user.username)">
+                        <strong class="primary-font">{{ user["name"] }}</strong> 
+                         <span class="glyphicon glyphicon-apple"></span>
+                    </div>
+
+                    <div class="header_sec2" *ngIf= " user.status == 'active' "   (click)= "dedicateduser(user.name,user.username)">
+                        <strong class="primary-font">{{ user["name"] }}</strong> 
+                         <span class="glyphicon glyphicon-apple"></span>
+                    </div>
+                    
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!--</div>-->
+
+<!--chat_sidebar-->
